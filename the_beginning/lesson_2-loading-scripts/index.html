@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://fav.farm/🧪" />
-    <title>Lesson 2 External Script loading</title>
+    <title>Lesson 2 : External Script Loading</title>
 </head>
 
 <body>
 
+    <h1>
+        Testing <code>async</code> and <code>defer</code> attribute of script tag
+    </h1>
+    <p>Please look in console tab for results</p>
 
 
     <script>
@@ -20,50 +24,50 @@
         console.log('%c-------FIRST---1-2-3------------', 'background: #222; color: #ffff')
     </script>
 
-    <script data-group="FIRST" src="./script-1.js" async></script>
-    <script data-group="FIRST" src="./script-2.js" defer></script>
-    <script data-group="FIRST" src="./script-3.js"></script>
+    <script data-group="FIRST" src="./script-1.js?FIRST=async" async></script>
+    <script data-group="FIRST" src="./script-2.js?FIRST=defer" defer></script>
+    <script data-group="FIRST" src="./script-3.js?FIRST"></script>
 
     <script>
         console.log('%c-------SECOND----3-1-2-------------', 'background: #222; color: #ffff')
     </script>
 
-    <script data-group="SECOND" src="./script-3.js"></script>
-    <script data-group="SECOND" src="./script-1.js" async></script>
-    <script data-group="SECOND" src="./script-2.js" defer></script>
+    <script data-group="SECOND" src="./script-3.js?SECOND"></script>
+    <script data-group="SECOND" src="./script-1.js?SECOND=async" async></script>
+    <script data-group="SECOND" src="./script-2.js?SECOND=defer" defer></script>
 
     <script>
         console.log('%c-------THIRD---2-3-1------------', 'background: #222; color: #ffff;font-weight: bold;')
     </script>
 
-    <script data-group="THIRD" src="./script-2.js" defer></script>
-    <script data-group="THIRD" src="./script-3.js"></script>
-    <script data-group="THIRD" src="./script-1.js" async></script>
+    <script data-group="THIRD" src="./script-2.js?THIRD=defer" defer></script>
+    <script data-group="THIRD" src="./script-3.js?THIRD"></script>
+    <script data-group="THIRD" src="./script-1.js?THIRD=async" async></script>
 
     <script>
         console.log('%c-------FOURTH---3-2-1------------', 'background: #222; color: #ffff')
     </script>
 
-    <script data-group="FOURTH" src="./script-3.js"></script>
-    <script data-group="FOURTH" src="./script-2.js" defer></script>
-    <script data-group="FOURTH" src="./script-1.js" async></script>
+    <script data-group="FOURTH" src="./script-3.js?FOURTH"></script>
+    <script data-group="FOURTH" src="./script-2.js?FOURTH=defer" defer></script>
+    <script data-group="FOURTH" src="./script-1.js?FOURTH=async" async></script>
 
 
     <script>
         console.log('%c-------FIFTH---2-1-3------------', 'background: #222; color: #ffff')
     </script>
 
-    <script data-group="FIFTH" src="./script-2.js" defer></script>
-    <script data-group="FIFTH" src="./script-1.js" async></script>
-    <script data-group="FIFTH" src="./script-3.js"></script>
+    <script data-group="FIFTH" src="./script-2.js?FIFTH=defer" defer></script>
+    <script data-group="FIFTH" src="./script-1.js?FIFTH=async" async></script>
+    <script data-group="FIFTH" src="./script-3.js?FIFTH"></script>
 
     <script>
         console.log('%c-------SIXTH---1-3-2------------', 'background: #222; color: #ffff')
     </script>
 
-    <script data-group="SIXTH" src="./script-1.js" async></script>
-    <script data-group="SIXTH" src="./script-3.js"></script>
-    <script data-group="SIXTH" src="./script-2.js" defer></script>
+    <script data-group="SIXTH" src="./script-1.js?SIXTH=async" async></script>
+    <script data-group="SIXTH" src="./script-3.js?SIXTH"></script>
+    <script data-group="SIXTH" src="./script-2.js?SIXTH=defer" defer></script>
 
     <script>
         console.log('Last Script Element');
