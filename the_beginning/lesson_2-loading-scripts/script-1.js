@@ -1,0 +1,1 @@
+console.log(`${document.currentScript.dataset.group} -> script[asyn]`);
